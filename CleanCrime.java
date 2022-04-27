@@ -5,19 +5,19 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class Clean {
+public class CleanCrime {
 
   public static void main(String[] args) throws Exception {
     Job job = new Job();
     job.setNumReduceTasks(1); // 1 Reduce task
-    job.setJarByClass(Clean.class);
-    job.setJobName("Clean");
+    job.setJarByClass(CleanCrime.class);
+    job.setJobName("Clean Crime");
 
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
     
-    job.setMapperClass(CleanMapper.class);
-    job.setReducerClass(CleanReducer.class);
+    job.setMapperClass(CleanCrimeMapper.class);
+    job.setReducerClass(CleanCrimeReducer.class);
 
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);

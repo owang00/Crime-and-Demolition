@@ -12,9 +12,12 @@ public class CleanMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
   @Override
   public void map(LongWritable key, Text value, Context context)throws IOException, InterruptedException {
     String line = value.toString();
-    IntWritable outputValue = new IntWritable(1);
+    String current = "";
+    IntWritable outputValue = new IntWritable();
     String[] words = line.split(",");
-    if(words[6].equals("DM"))
-      context.write(new Text("Total Lines: "), outputValue);
+    if(words[6].equals("DM")) {
+      current = words[0]+","+words[6]+","+words[11]+","+words[17]+","+words[26]+","+words[27];
+      context.write(new Text(current), outputValue);
+    }
   }
 }
