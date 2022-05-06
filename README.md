@@ -1,6 +1,17 @@
 # Crime-and-Demolition
 Project for Processing Big Data where we analyze the correlation between crime and building demolition
 
-Project Proposal: https://docs.google.com/document/d/1KWsy4wi8VENo3hw-rE2TpOxU9A0xEA3nqwQ9h0Od2bA/edit?usp=sharing
+We have several folders
+*ana_code- Code for our analytics
+*Analytics- Holds pictures of our analytics. 
+    *Analytics Sheets- The CSV resulting from our Hive queries can be found in the Analytics Sheet. Analytics Sheet is the unified sheet for all of these excel sheets we have so far, while the other ones are individual ones. 
+*data_ingest- Code and commands for data ingestion
+*etl_code- Most of our code where we clean and filtered data
+*profiling_code- Nothing in here 
+*test_code- Test code and unused code in a directory 
+*screenshots- Shows screenshots of running code 
 
-Presentation Slides: https://docs.google.com/presentation/d/10YisMKEBkv-zSqxG8k0er8OVf1G2QX2_mnVuwBvh51g/edit?usp=sharing
+
+The output files for our code can also be found in at /home/ow361 or /home/aj2985. These files can be run with MapReduce.
+The results can be found in /user/ow361/Project or /user/aj2985/Project. 
+The SQL queries were run on Hive and exported to CSV's as found in the analytics folder.

@@ -1,0 +1,49 @@
+/* link color */
+/* rounded corners */
+/* box-shadow - see Programs & Initiatives hover state */
+
+.news-panel {
+  background: #efefef;
+  padding: 20px;
+  margin: 0 0 20px 0 !important;
+  border-radius: 5px; }
+  @media only screen and (max-width: 767px) {
+    
+    .news-panel {
+      display: block;
+      float: none;
+      clear: both;
+      width: 100%; } }
+
+
+.news-panel .factsheader {
+  top: 10px;
+  right: 0px;
+  cursor: default;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666666;
+  text-transform: uppercase; }
+
+
+.news-panel ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+  float: left;
+  color: #000; }
+
+
+.news-panel ul li label {
+  font-size: 39px;
+  clear: right; }
+
+
+.news-panel ul li small {
+  clear: left;
+  float: left;
+  width: 100%; }
+
+
+.news-panel ul {
+  list-style: none;
+  margin: 0; }

@@ -1,0 +1,6 @@
+scp DOB_Permit.csv NYPD_Arrest_Data__Year_to_Date_.csv ow361@peel.hpc.nyu.edu:/home/ow361/Project
+scp Clean.java CleanMapper.java CleanReducer.java ow361@peel.hpc.nyu.edu:/home/ow361/Project
+scp CleanCrime.java CleanCrimeMapper.java CleanCrimeReducer.java ow361@peel.hpc.nyu.edu:/home/ow361/Project/Crime
+scp NYPD_Arrest_Data__Year_to_Date_.csv ow361@peel.hpc.nyu.edu:/home/ow361/Project
+hdfs dfs -put DOB_Permit.csv Project
+hdfs dfs -put NYPD_Arrest_Data__Year_to_Date_.csv Project

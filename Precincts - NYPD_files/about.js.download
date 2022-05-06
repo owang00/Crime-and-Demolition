@@ -1,0 +1,58 @@
+var NYC = NYC || {};
+NYC.Agencies = {};
+
+/**
+ * Events Index
+ *
+ */
+NYC.Agencies.About = (function() {
+	
+	var self = this;
+
+    self.init = function init() {
+
+    	//inline comment
+    	var self = this;
+
+    	self.bindEvents();
+		$("a.main-filter-category").each(function(){
+			if($(this).height()>54){
+				$(this).addClass("condense");
+			}
+		});
+    },
+
+    /* inline comment */
+    self.isDevice = function() {
+
+    	var self = this;
+
+    },
+
+	self.bindEvents = function() {
+
+		var self = this;
+		$('.module-threeoneonefooter').remove();
+
+	}
+
+	/* private function */
+	function private() {
+
+	}
+
+    return self;
+
+}());
+
+$(document).ready(function(){
+	NYC.Agencies.About.init();
+	$( ".upper-header-black" ).before( "<div class='row emergency-alert-row'><div class='container'><div class='module module-emergency-alert'><h2 class='sr-only'>COVID-19 Alert Levels in NYC. Get the latest on the COVID-19 Vaccine.</h2><span class='alert-icon'></span><a href='https://www1.nyc.gov/site/doh/covid/covid-19-alert-levels.page'>COVID-19 Alert Levels in NYC</a><br><span class='alert-icon'></span><a href='http://www.nyc.gov/vaccinecommandcenter'>Get the latest on the COVID-19 Vaccine</a></div></div></div>" );
+	if($(".page").height()<$(window).height()){
+		$("<link/>", {
+				rel: "stylesheet",
+				type: "text/css",
+				href: "/assets/home/css/pages/agencies/fix-footer.css"
+			}).appendTo("head");
+	}
+});

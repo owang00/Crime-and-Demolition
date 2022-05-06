@@ -1,0 +1,51 @@
+/* line 1, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+.share {
+  font-weight: bold;
+  color: #666;
+  font-size: 12px;
+  margin:0; }
+  /* line 6, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share span {
+    float: left;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    font-weight: bold; }
+  /* line 19, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share span.label {
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    line-height: 22px;
+    vertical-align: middle; }
+  /* line 27, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share .facebook_custom {
+    background: url("/assets/home/images/global/share/facebook.png") no-repeat; }
+  /* line 30, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share .twitter_custom {
+    background: url("/assets/home/images/global/share/twitter.png") no-repeat; }
+  /* line 33, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share .googleplus_custom {
+    background: url("/assets/home/images/global/share/google.png") no-repeat; 
+    display: none;
+    }
+  /* line 36, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share .tumblr_custom {
+    background: url("/assets/home/images/global/share/tumblr.png") no-repeat; }
+  /* line 39, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share .email_custom {
+    background: url("/assets/home/images/global/share/email.png") no-repeat; }
+  /* line 43, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/share-icons.scss */
+  .share .permalink_custom {
+    background: url("/assets/home/images/global/share/permalink.png") no-repeat;
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;
+    float: left; }

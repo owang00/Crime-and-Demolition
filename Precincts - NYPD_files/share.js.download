@@ -1,0 +1,44 @@
+function initShareLinks(){
+	$(".twitter_custom").each(function(){
+        var twitterDescription=$(this).data().title.trim();
+        if(twitterDescription.length>117){
+        	twitterDescription=twitterDescription.substring(0, 113).split(" ").slice(0, -1).join(" ");
+        	twitterDescription=twitterDescription + " ...";
+    	}
+		$(this).parent("a").attr("href", "https://twitter.com/intent/tweet?text="+twitterDescription+" "+convertIP($(this).data().url)+" via @nycgov");
+	});
+	$(".facebook_custom").each(function(){
+		if($("meta[property='og:title']")){
+			$(this).parent("a").attr("href","https://www.facebook.com/sharer/sharer.php?u="+convertIP($(this).data().url));
+		}else{
+			$(this).parent("a").attr("href","http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+convertIP($(this).data().url)+"&p[title]="+$(this).data().title);
+		}
+	});
+	$(".googleplus_custom").each(function(){
+		$(this).parent("a").attr("href","https://plus.google.com/share?url="+encodeURIComponent(convertIP($(this).data().url)));
+	});
+	$(".tumblr_custom").each(function(){
+		$(this).parent("a").attr("href","http://www.tumblr.com/share/link?url="+encodeURIComponent(convertIP($(this).data().url))+"&name="+encodeURIComponent($(this).data().title)+"&description=via NYC.gov");
+	});
+	$(".email_custom").each(function(){
+		$(this).parent("a").attr("href","mailto:?subject=" + encodeURIComponent($(this).data().title)+"&body=" + encodeURIComponent(convertIP($(this).data().url)));
+	});
+}
+
+function convertIP(theUrl){
+	return(theUrl.replace('http://157.188.76.61:8004','https://www1.nyc.gov').replace('http://10.155.20.219:8004','https://www1.nyc.gov').replace('https://157.188.76.62:8004','https://www1.nyc.gov').replace('http://nyc-app:8004','https://www1.nyc.gov'));
+}
+function addLoadEvent(func) { 
+	var oldonload = window.onload; 
+	if (typeof window.onload != 'function') { 
+		window.onload = func; 
+	} else { 
+		window.onload = function() { 
+			if (oldonload) { 
+				oldonload(); 
+			} 
+			func(); 
+		} 
+	} 
+} 
+addLoadEvent(initShareLinks);
